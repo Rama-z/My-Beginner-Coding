@@ -1,29 +1,25 @@
 // Jawaban homework no 2 Javascript 1
 
-function nilaiUN(a, b, c, d) {
-    let bahasaIndonesia = a;
-    let bahasaInggris = b;
-    let matematika = c;
-    let IPA = d;
-    let rataRata = (bahasaIndonesia + bahasaInggris + matematika + IPA) / 4
-    if ((typeof a == 'undefined') || (typeof b == 'undefined') ||
-        (typeof c == 'undefined') || (typeof d == 'undefined')) {
+function nilaiUN(bind, bing, mtk, ipa) {
+    if ((typeof bind == 'undefined') || (typeof bing == 'undefined') ||
+        (typeof mtk == 'undefined') || (typeof ipa == 'undefined')) {
         console.log('Tolong isi semua input dengan lengkap');
-    } else if ((typeof a != 'number') || (typeof b != 'number') ||
-        (typeof c != 'number') || (typeof d != 'number')) {
+    } else if ((typeof bind != 'number') || (typeof bing != 'number') ||
+        (typeof mtk != 'number') || (typeof ipa != 'number')) {
         console.log('Tolong pastikan semua input merupakan angka');
-    } else if ((typeof a == 'number') && (typeof b == 'number') &&
-        (typeof c == 'number') && (typeof d == 'number')) {
+    } else if ((typeof bind == 'number') && (typeof bing == 'number') &&
+        (typeof mtk == 'number') && (typeof ipa == 'number')) {
+        let rataRata = (bind + bing + mtk + ipa) / 4
         if (rataRata >= 90) {
             console.log(`Rata-rata = ${rataRata}`);
             console.log(`Grade = A`);
-        } else if ((rataRata >= 80) && (rataRata <= 89)) {
+        } else if (rataRata >= 80) {
             console.log(`Rata-rata = ${rataRata}`);
             console.log(`Grade = B`);
-        } else if ((rataRata >= 70) && (rataRata <= 79)) {
+        } else if (rataRata >= 70) {
             console.log(`Rata-rata = ${rataRata}`);
             console.log(`Grade = C`);
-        } else if ((rataRata >= 60) && (rataRata <= 69)) {
+        } else if (rataRata >= 60) {
             console.log(`Rata-rata = ${rataRata}`);
             console.log(`Grade = D`);
         } else if (rataRata <= 59) {
